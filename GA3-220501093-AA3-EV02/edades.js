@@ -13,7 +13,7 @@ function edadesMayores18(edades) {
             edadesMayores18.push(edades[i]);
         }
     }
-    return edadesMayores18;
+    return edadesMayores18.length;
 }
 
 //create a function to determine the ages above 60
@@ -24,30 +24,44 @@ function edadesMayores60(edades) {
             edadesMayores60.push(edades[i]);
         }
     }
-    return edadesMayores60;
+    return edadesMayores60.length;
 }
 
-//create a function to determine the minimum age
-function edadesMinimas(edades) {
-    var edadesMinimas = [];
+//cantidad menores de 18
+function edadesMenores18(edades) {
+    var edadesMenores18 = [];
     for (var i = 0; i < edades.length; i++) {
-        if (edades[i] <= 18) {
-            edadesMinimas.push(edades[i]);
+        if (edades[i] < 18) {
+            edadesMenores18.push(edades[i]);
         }
     }
-    return edadesMinimas;
-}       
-
-//create a function to determine the maximum age
-function edadesMaximas(edades) {
-    var edadesMaximas = [];
-    for (var i = 0; i < edades.length; i++) {
-        if (edades[i] >= 60) {
-            edadesMaximas.push(edades[i]);
-        }
-    }
-    return edadesMaximas;
+    return edadesMenores18.length;
 }
+
+//edad mas baja
+function edadMasBaja(edades) {
+    var edadMasBaja = edades[0];
+    for (var i = 0; i < edades.length; i++) {
+        if (edades[i] < edadMasBaja) {
+            edadMasBaja = edades[i];
+        }
+    }
+    return edadMasBaja;
+}
+
+
+//edad mas alta
+function edadMasAlta(edades) {
+    var edadMasAlta = 0;
+    for (var i = 0; i < edades.length; i++) {
+        if (edades[i] > edadMasAlta) {
+            edadMasAlta = edades[i];
+        }
+    }
+    return edadMasAlta;
+}
+
+
 
 //create a function to determine the average age
 function edadesMedia(edades) {
@@ -57,10 +71,3 @@ function edadesMedia(edades) {
     }
     return edadesMedia / edades.length;
 }
-
-
-
-
-
-
-

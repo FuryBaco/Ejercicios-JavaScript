@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://googleapis.com/css?family-Roboto" rel="stylesheet">
+  <link href="style_AyP.css" rel="stylesheet">
+  <title>A&P</title>
+</head>
+
+<body>
+  <script src="area_perimetro.js"></script>
+  <div class="contenedor">
+    <header class="header">
+      <div class="logo-sena">
+        <img src="recursos/logo-sena-4.jpg" class="logo-sena" />
+      </div>
+    </header>
+    <div class="titulo">
+      <p>Calculadora de area y perimetro de figuras planas</p>
+    </div>
+    <div class="circulo">
+      <img src="recursos/circulo.png" class="img-formulas" id="circulo"/>
+      <input placeholder="Digite el radio..." class="input" type="number" id="radio">
+      <button onclick="circuloAP()">Calcular</button>
+      <input placeholder="Area" class="input" id="respuestaAreaC"  type="text"  readonly>
+      <input placeholder="Perimetro" class="input" type="text" id="respuestaPerimetroC" readonly>
+    </div>
+    <div class="triangulo">
+      <img src="recursos/triangulo.png" class="img-formulas" id="triangulo"/>
+      <input placeholder="Digite el lado a" class="input" type="number" id="at">
+      <input placeholder="Digite el lado c" class="input" type="number" id="ct">
+      <input placeholder="Digite el angulo b" class="input" type="number" id="angulobt">
+      <button onclick="trianguloAP()">Calcular</button>
+      <input placeholder="Area" class="input" type="text" id="respuestaAreaT" readonly>
+      <input placeholder="Perimetro" class="input" type="text" id="respuestaPerimetroT" readonly>
+    </div>
+    <div class="rectangulo">
+      <img src="recursos/rectangulo.png" class="img-formulas" id="rectangulo"/>
+      <input placeholder="Digite el lado a" class="input" type="number" id="base">
+      <input placeholder="Digite el lado b" class="input" type="number" id="altura">
+      <button onclick="rectanguloAP()">Calcular</button>
+      <input placeholder="Area" class="input" type="text" id="respuestaAreaR" readonly>
+      <input placeholder="Perimetro" class="input" type="text" id="respuestaPerimetroR" readonly>
+    </div>
+  </div>
+</body>
+
+</html>
