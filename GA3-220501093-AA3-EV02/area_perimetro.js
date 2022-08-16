@@ -8,12 +8,12 @@ function rectanguloAP() {
 }
 
 function trianguloAP() {
-  let a = parseFloat(document.getElementById("at").value);
-  let b = parseFloat(document.getElementById("ct").value);
-  let anguloc = parseFloat(document.getElementById("angulobt").value);
-  var area = (a * b * Math.sin(anguloc)) / 2;
-  var c = a + b + Math.sqrt(a * a + b * b - 2 * a * b * Math.cos(anguloc));
-  var perimetro = a + b + c;
+  let at = parseFloat(document.getElementById("at").value);
+  let ct = parseFloat(document.getElementById("ct").value);
+  let angulobt = parseFloat(document.getElementById("angulobt").value);
+  var area = (at * ct * Math.sin(angulobt * (Math.PI/180))) / 2; //formula de Heron
+  var bt = Math.sqrt(at * at + ct * ct - 2 * at * ct * Math.cos(angulobt * (Math.PI/180)));
+  var perimetro = at + bt + ct;
   document.getElementById("respuestaAreaT").value = "Area = " + area.toFixed(2);
   document.getElementById("respuestaPerimetroT").value = "Peri = " + perimetro.toFixed(2);
 }
