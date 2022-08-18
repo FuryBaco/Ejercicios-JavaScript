@@ -1,73 +1,125 @@
-//create an array of 10 random integers called edades between 0 and 120
-var edades = [];
+
+//Array de edades de 10 personas creada aleatoriamente
+
+/* var edades = [];
 for (var i = 0; i < 10; i++) {
-    edades[i] = Math.floor(Math.random() * 121);
-}
+  edades[i] = Math.floor(Math.random() * 121);
+} */
 
+/* var edades = [];
+let edad = document.getElementById("edad").value;
+for (var i = 0; i < 10; i++) {
 
+} */
+var edades = [];
 //create a function to determine the ages above 18
 function edadesMayores18(edades) {
-    var edadesMayores18 = [];
-    for (var i = 0; i < edades.length; i++) {
-        if (edades[i] >= 18) {
-            edadesMayores18.push(edades[i]);
-        }
+  var edadesMayores18 = [];
+  for (var i = 0; i < edades.length; i++) {
+    if (edades[i] >= 18) {
+      edadesMayores18.push(edades[i]);
     }
-    return edadesMayores18.length;
+  }
+  var conteo = edadesMayores18.length;
+  console.log(conteo);
+  document.getElementById("18+").value = conteo;
+
 }
 
 //create a function to determine the ages above 60
 function edadesMayores60(edades) {
-    var edadesMayores60 = [];
-    for (var i = 0; i < edades.length; i++) {
-        if (edades[i] >= 60) {
-            edadesMayores60.push(edades[i]);
-        }
+  var edadesMayores60 = [];
+  for (var i = 0; i < edades.length; i++) {
+    if (edades[i] >= 60) {
+      edadesMayores60.push(edades[i]);
     }
-    return edadesMayores60.length;
+  }
+  conteo = edadesMayores60.length;
+  console.log(conteo);
+  document.getElementById("60+").value = conteo;
 }
 
 //cantidad menores de 18
 function edadesMenores18(edades) {
-    var edadesMenores18 = [];
-    for (var i = 0; i < edades.length; i++) {
-        if (edades[i] < 18) {
-            edadesMenores18.push(edades[i]);
-        }
+  var edadesMenores18 = [];
+  for (var i = 0; i < edades.length; i++) {
+    if (edades[i] < 18) {
+      edadesMenores18.push(edades[i]);
     }
-    return edadesMenores18.length;
+  }
+  conteo = edadesMenores18.length;
+  console.log(conteo);
+  document.getElementById("18-").value = conteo;
 }
 
 //edad mas baja
 function edadMasBaja(edades) {
-    var edadMasBaja = edades[0];
-    for (var i = 0; i < edades.length; i++) {
-        if (edades[i] < edadMasBaja) {
-            edadMasBaja = edades[i];
-        }
+  var edadMasBaja = edades[0];
+  for (var i = 0; i < edades.length; i++) {
+    if (edades[i] < edadMasBaja) {
+      edadMasBaja = edades[i];
     }
-    return edadMasBaja;
+  }
+  conteo = edadMasBaja;
+  console.log(conteo);
+  document.getElementById("menor").value = conteo;
 }
 
 
 //edad mas alta
 function edadMasAlta(edades) {
-    var edadMasAlta = 0;
-    for (var i = 0; i < edades.length; i++) {
-        if (edades[i] > edadMasAlta) {
-            edadMasAlta = edades[i];
-        }
+  var edadMasAlta = 0;
+  for (var i = 0; i < edades.length; i++) {
+    if (edades[i] > edadMasAlta) {
+      edadMasAlta = edades[i];
     }
-    return edadMasAlta;
+  }
+  conteo = edadMasAlta;
+  console.log(conteo);
+  document.getElementById("mayor").value = conteo;
 }
 
 
 
 //create a function to determine the average age
 function edadesMedia(edades) {
-    var edadesMedia = 0;
-    for (var i = 0; i < edades.length; i++) {
-        edadesMedia += edades[i];
-    }
-    return edadesMedia / edades.length;
+  var edadesMedia = 0;
+  for (var i = 0; i < edades.length; i++) {
+    edadesMedia += edades[i];
+  }
+  conteo = edadesMedia / edades.length;
+  console.log(conteo);
+  document.getElementById("promedio").value = conteo;
 }
+
+function resultado() {
+  console.log("Hola Mundo " + edadesMayores18(edades));
+  /* document.getElementById("18+").value = edadesMayores18(edades); */
+}
+
+
+function ages() {
+  let age = document.getElementById("age").value;
+  document.getElementById("age").value = "";
+  if (age > 0 && age <= 120) {
+    if (edades.length < 9) {
+      edades.push(parseFloat(age));
+      console.log(edades);
+    }
+    else if (edades.length < 10){
+      edades.push(parseFloat(age));
+      console.log(edades);
+      alert("La lista se encuentra llena");
+      document.getElementById("calculos").hidden = false;
+    }
+    else {
+      alert("La lista se encuentra llena");
+      document.getElementById("calculos").hidden = false;
+    }
+  }
+  else {
+    alert("Ingrese una edad mayor a 0 y menor a 120");
+  }
+}
+
+
