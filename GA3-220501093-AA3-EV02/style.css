@@ -19,9 +19,9 @@ body {
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas: "header      header      header     header"
-                       "header-1    header-1    header-1   header-1"
-                       "header-2    header-2    header-2   header-2"
-                       "item-1      item-2      item-3     item-4";
+    "header-1    header-1    header-1   header-1"
+    "header-2    header-2    header-2   header-2"
+    "item-1      item-2      item-3     item-4";
 }
 
 .contenedor {
@@ -42,13 +42,13 @@ body {
   grid-column-start: header;
   grid-column-end: header;
   grid-template-areas: "logo-sena     logo-sena"
-                       "logo-sena     logo-sena";
+    "logo-sena     logo-sena";
 }
 
 .contenedor .header .linea-1 {
   color: #FFEBE5;
   text-align: right;
-  font-size : calc(0.75em + 1vw);
+  font-size: calc(0.75em + 1vw);
   font-weight: bold;
   padding-right: 3px;
   align-self: center;
@@ -82,105 +82,100 @@ body {
 .contenedor .item-1,
 .contenedor .item-2,
 .contenedor .item-3,
-.contenedor .item-4
-{
+.contenedor .item-4 {
   background: #ff8000;
   height: 200px;
   color: #FFEBE5;
 }
 
-.contenedor .item-1
-{
+.contenedor .item-1 {
   grid-area: item-1;
 }
 
 .cta {
- position: relative;
- margin: auto;
- padding: 12px 18px;
- transition: all 0.2s ease;
- border: none;
- background: none;
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
 }
 
 .contenedor .item-1 .cta:before,
 .contenedor .item-2 .cta:before,
 .contenedor .item-3 .cta:before,
 .contenedor .item-4 .cta:before {
- content: "";
- position: absolute;
- top: 0;
- left: 0;
- display: block;
- border-radius: 50px;
- background: #B37365;
- width: 45px;
- height: 45px;
- transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #B37365;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
 }
 
 .contenedor .item-1 .cta span,
 .contenedor .item-2 .cta span,
 .contenedor .item-3 .cta span,
 .contenedor .item-4 .cta span {
- position: relative;
- font-family: "Ubuntu", sans-serif;
- font-size: 18px;
- font-weight: 700;
- letter-spacing: 0.05em;
- color: #234567;
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
 }
 
 .contenedor .item-1 .cta svg,
 .contenedor .item-2 .cta svg,
 .contenedor .item-3 .cta svg,
 .contenedor .item-4 .cta svg {
- position: relative;
- top: 0;
- margin-left: 10px;
- fill: none;
- stroke-linecap: round;
- stroke-linejoin: round;
- stroke: #234567;
- stroke-width: 2;
- transform: translateX(-5px);
- transition: all 0.3s ease;
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
 }
 
 .contenedor .item-1 .cta:hover:before,
 .contenedor .item-2 .cta:hover:before,
 .contenedor .item-3 .cta:hover:before,
 .contenedor .item-4 .cta:hover:before {
- width: 100%;
- background: #FFEBE5;
+  width: 100%;
+  background: #FFEBE5;
 }
 
 .contenedor .item-1 .cta:hover svg,
 .contenedor .item-2 .cta:hover svg,
 .contenedor .item-3 .cta:hover svg,
 .contenedor .item-4 .cta:hover svg {
- transform: translateX(0);
+  transform: translateX(0);
 }
 
 .contenedor .item-1 .cta:active,
 .contenedor .item-2 .cta:active,
 .contenedor .item-3 .cta:active,
 .contenedor .item-4 .cta:active {
- transform: scale(0.95);
+  transform: scale(0.95);
 }
 
-.contenedor .item-2
-{
+.contenedor .item-2 {
   grid-area: item-2;
 }
 
-.contenedor .item-3
-{
+.contenedor .item-3 {
   grid-area: item-3;
 }
 
-.contenedor .item-4
-{
+.contenedor .item-4 {
   grid-area: item-4;
 }
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>vectores_ordenados</title>
+    <link href="style_vectores.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <script src="ordenar_vectores.js"></script>
+    <div class="contenedor">
+        <header class="header">
+            <div class="logo-sena">
+                <img src="recursos/logo-sena-4.jpg" class="logo-sena" />
+            </div>
+        </header>
+
+        <div class="titulo">
+            <p>Union y ordenacion de vectores</p>
+        </div>
+        <div>
+            <input type="number" id="v1" onkeydown="if (event.keyCode==13) {valoresV1()}" />
+            <input type="submit" id="v1btn" onclick="valoresV1()" value="Ingresar dato" />
+        </div>
+        <div>
+            <input type="text" id="v2" onkeydown="if (event.keyCode==13) {valoresV2()}" />
+            <input type="submit" id="v2btn" onclick="valoresV2()" value="Ingresar dato" />
+        </div>
+        <div>
+            <input type="submit" id="vcvbtn" onclick="vectorOrdenado()" value="Resultado" />
+            <ul id="v4"></ul>
+        </div>
+    </div>
+</body>
+
+</html>

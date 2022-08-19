@@ -1,31 +1,57 @@
-//create an array of 5 random integers ordered from smallest to largest caled vector_1
 var vector_1 = [];
-for (var i = 0; i < 5; i++) {
-    vector_1[i] = Math.floor(Math.random() * 100);
-}
-ordenarVector(vector_1);
+var vector_2 = [];
 
-//create an array of 5 random integers ordered from largest to smallest called vector_2
-var numeros = [];
-for (var i = 0; i < 5; i++) {
-    vector_2[i] = Math.floor(Math.random() * 100);
-}
-ordenarVector(vector_2);
+function valoresV1() {
+    var ingresoV1 = document.getElementById("v1").value;
+    document.getElementById("v1").value = ""; /* Limpiar casilla */
+    if (vector_1.length < 5) {
+        if (ingresoV1 < vector_1[vector_1.length - 1]) {
+            alert("El valor ingresado es menor al anterior, porfavor ingrese un numero mayor");
+        }
+        else {
 
-//create a function to order the array from largest to smallest
-function ordenarVector(vector_2) {
-    var vector_3 = [];
-    for (var i = 0; i < vector_2.length; i++) {
-        for (var j = 0; j < vector_2.length; j++) {
-            if (vector_2[i] > vector_2[j]) {
-                vector_3[i] = vector_2[i];
-                vector_3[j] = vector_2[j];
-            }
+            vector_1.push(parseFloat(ingresoV1));
+            console.log(vector_1);
+            console.log(vector_1[vector_1.length - 1]);
         }
     }
-    return vector_3;
+
+    else {
+        alert("la lista se encuentra llena");
+    }
 }
 
-//mergue the two arrays and order them from smallest to largest
-var vector_4 = vector_1.concat(vector_2);
-ordenarVector(vector_4);
+
+function valoresV2() {
+    var ingresoV2 = document.getElementById("v2").value;
+    document.getElementById("v2").value = ""; /* Limpiar casilla */
+    if (vector_2.length < 5) {
+        if (ingresoV2 < vector_2[vector_2.length - 1]) {
+            alert("El valor ingresado es menor al anterior, por favor ingrese un valor mayor");
+        }
+        else {
+            vector_2.push(parseFloat(ingresoV2));
+            console.log(vector_2)
+        }
+    }
+    else {
+        alert("la lista se encuentra llena");
+    }
+}
+
+
+function consolaVectores() {
+    console.log(vector_1);
+    console.log(vector_2);
+}
+
+function vectorOrdenado() {
+    var vector_4 = vector_1.concat(vector_2);
+    vector_4.sort((a, b) => a - b);
+    let list = document.getElementById("v4");
+    vector_4.forEach((item => {
+        let li = document.createElement("li");
+        li.innerText = item;
+        list.appendChild(li);
+    }));
+}
