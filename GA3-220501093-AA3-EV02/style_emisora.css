@@ -34,16 +34,14 @@ h2 {
     color: var(--color-darkest);
     font-size: 110%;
     line-height: 1.1;
-    text-align:center;
 }
 
 h1 {
     font-size: 125%;
-    
 }
 
 /* Set up general layout rules for outer containers. */
-.contenedor,
+.contact-form,
 .results {
     width: 90vw;
     max-width: 550px;
@@ -53,7 +51,6 @@ h1 {
 p {
     margin-top: 0.5rem;
     font-size: 87.5%;
-    text-align: justify;
 }
 
 .results pre {
@@ -64,7 +61,7 @@ p {
     overflow-x: scroll;
 }
 
-.contenedor form {
+.contact-form form {
     position: relative;
     display: block;
     margin: 0;
@@ -79,7 +76,7 @@ p {
     padding: 0.5rem 1rem;
 }
 
-.contenedor label {
+.contact-form label {
     display: block;
     color: gray-dark;
     font-family: Lato, sans-serif;
@@ -93,14 +90,14 @@ p {
     font-size: 90%;
 }
 
-.contenedor label.inline {
+.contact-form label.inline {
     display: inline-block;
     margin-left: 0.25rem;
 }
 
-.contenedor input,
-.contenedor select,
-.contenedor textarea {
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
     display: block;
     margin-top: 0.25rem;
     padding: 0.5rem 0.75rem;
@@ -111,23 +108,23 @@ p {
     transition: 150ms border-color linear;
 }
 
-.contenedor input[type=checkbox],
-.contenedor input[type=radio] {
+.contact-form input[type=checkbox],
+.contact-form input[type=radio] {
     display: inline-block;
     width: auto;
 }
 
-.contenedor input[type=checkbox]:not(:first-of-type),
-.contenedor input[type=radio]:not(:first-of-type) {
+.contact-form input[type=checkbox]:not(:first-of-type),
+.contact-form input[type=radio]:not(:first-of-type) {
     margin-left: 1rem;
 }
 
-.contenedor input:focus,
-.contenedor input:active {
+.contact-form input:focus,
+.contact-form input:active {
     border-color: var(--color-gray-medium);
 }
 
-.contenedor button {
+.contact-form button {
     display: block;
     margin: 0.5rem 1rem 0;
     padding: 0 1rem 0.125rem;
@@ -142,9 +139,9 @@ p {
     transition: 150ms all linear;
 }
 
-.contenedor button:hover,
-.contenedor button:active,
-.contenedor button:focus {
+.contact-form button:hover,
+.contact-form button:active,
+.contact-form button:focus {
     background: var(--color-darkest);
     cursor: pointer;
 }

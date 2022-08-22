@@ -10,21 +10,27 @@
 
 <body>
     <script src="ordenar_vectores.js"></script>
-    <div class="contenedor">
+    <section class="contenedor">
         <header class="header">
             <div class="logo-sena">
                 <img src="recursos/logo-sena-4.jpg" class="logo-sena" />
             </div>
         </header>
 
-        <div class="titulo">
-            <p>Union y ordenacion de vectores</p>
-        </div>
-        <div>
+
+        <h1>Union y ordenacion de vectores</h1>
+        <p>Ingrese 5 datos numericos en cada uno de los campos, presione enter o el boton para ingresar cada dato, cada
+            dato que ingrese debe ser mayor al anterior dado que es uno de los objetivos de este ejercicio, validar que
+            el dato ingresado sea mayor al anterior, como resultado obtendremos una lista de los datos ordenados de la
+            union de las dos listas creadas. </p>
+
+        <div class="input-group">
+            <label for="v1" id="lblV1">Ingrese 5 datos</label>
             <input type="number" id="v1" onkeydown="if (event.keyCode==13) {valoresV1()}" />
             <input type="submit" id="v1btn" onclick="valoresV1()" value="Ingresar dato" />
         </div>
-        <div>
+        <div class="input-group">
+            <label for="v1" id="lblV2">Ingrese 5 datos</label>
             <input type="text" id="v2" onkeydown="if (event.keyCode==13) {valoresV2()}" />
             <input type="submit" id="v2btn" onclick="valoresV2()" value="Ingresar dato" />
         </div>
@@ -32,7 +38,7 @@
             <input type="submit" id="vcvbtn" onclick="vectorOrdenado()" value="Resultado" />
             <ul id="v4"></ul>
         </div>
-    </div>
+    </section>
 </body>
 
 </html>
