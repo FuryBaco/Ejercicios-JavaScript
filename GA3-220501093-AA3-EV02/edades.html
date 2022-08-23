@@ -11,7 +11,7 @@
 <body>
   <script src="edades.js"></script>
 
-  <div class="contenedor">
+  <section class="contenedor">
     <header class="header">
       <div class="logo-sena">
         <img src="recursos/logo-sena-4.jpg" class="logo-sena" />
@@ -19,35 +19,32 @@
     </header>
 
     <div class="titulo">
-      <p>Estadisticas de una lista de edades entre 0 y 120 años</p>
+      <h1>Estadisticas de una lista de edades entre 0 y 120 años</h1>
+      <p> Por favor ingrese 10 valores de edades entre 0 - 120 años</p>
     </div>
-
-    <input type="number" id="age" onkeydown="if (event.keyCode==13) {ages()}" />
-    <input type="submit" id="agebtn" onclick="ages()" value="Ingresar" />
+    <div class="input-group">
+      <label for="edad" id="lblEdad">Ingrese una edad</label>
+      <input type="number" id="age" onkeydown="if (event.keyCode==13) {ages()}" />
+      <input type="submit" id="agebtn" onclick="ages()" value="Ingresar" />
+    </div>
 
     <div id="calculos" class="resultados" hidden>
-      <input type="button" id="+18" onclick="edadesMayores18(edades)" value="> 18" />
+      <h2>Resultados</h2>
+      <label for="+18">Mayores a 18 años</label>
       <input type="text" id="18+" readonly />
-      <br>
-      <input type="button" id="-18" onclick="edadesMenores18(edades)" value="< 18" />
+      <label for="18+">Menores a 18 años</label>
       <input type="text" id="18-" readonly />
-      <br>
-      <input type="button" id="+60" onclick="edadesMayores60(edades)" value="> 60" />
+      <label for="60+">Adultos Mayores</label>
       <input type="text" id="60+" readonly />
-      <br>
-      <input type="button" id="younger" onclick="edadMasBaja(edades)" value="Menor" />
+      <label for="menor">Edad de la persona mas joven</label>
       <input type="text" id="menor" readonly />
-      <br>
-      <input type="button" id="oldest" onclick="edadMasAlta(edades)" value="Mayor" />
+      <label for="mayor">Edad de la persona mas vieja</label>
       <input type="text" id="mayor" readonly />
-      <br>
-      <input type="button" id="average" onclick="edadesMedia(edades)" value="Promedio" />
+      <label for="promedio">Promedio de edades</label>
       <input type="text" id="promedio" readonly />
-      <br>
-
     </div>
 
-  </div>
+  </section>
 
 
 </body>

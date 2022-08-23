@@ -1,17 +1,5 @@
-
-//Array de edades de 10 personas creada aleatoriamente
-
-/* var edades = [];
-for (var i = 0; i < 10; i++) {
-  edades[i] = Math.floor(Math.random() * 121);
-} */
-
-/* var edades = [];
-let edad = document.getElementById("edad").value;
-for (var i = 0; i < 10; i++) {
-
-} */
 var edades = [];
+var conteo = 0;
 //create a function to determine the ages above 18
 function edadesMayores18(edades) {
   var edadesMayores18 = [];
@@ -101,16 +89,26 @@ function resultado() {
 function ages() {
   let age = document.getElementById("age").value;
   document.getElementById("age").value = "";
+  conteo = edades.length;
   if (age > 0 && age <= 120) {
     if (edades.length < 9) {
       edades.push(parseFloat(age));
       console.log(edades);
+      document.getElementById("age").placeholder = "Ingresaste " + (conteo+1) + " edades";
     }
     else if (edades.length < 10){
       edades.push(parseFloat(age));
       console.log(edades);
       alert("La lista se encuentra llena");
+      document.getElementById("age").placeholder = "Lleno";
       document.getElementById("calculos").hidden = false;
+      edadesMayores18(edades);
+      edadesMayores60(edades);
+      edadesMenores18(edades);
+      edadMasBaja(edades);
+      edadMasAlta(edades);
+      edadesMedia(edades);
+
     }
     else {
       alert("La lista se encuentra llena");
